@@ -12,24 +12,40 @@
             padding: 0;
             box-sizing: border-box;
             font-family: Arial, sans-serif;
+            scroll-behavior: smooth;
         }
 
         body {
-            height: 100vh;
             background: url('background.jpg') no-repeat center center/cover;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            color: white;
         }
 
-        .overlay {
-            background: rgba(0, 0, 0, 0.7);
-            padding: 40px;
-            border-radius: 15px;
-            text-align: center;
+        /* MENU */
+        .menu {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+        }
+
+        .menu a {
+            display: block;
             color: white;
-            width: 90%;
-            max-width: 800px;
+            text-decoration: none;
+            margin: 8px 0;
+            font-weight: bold;
+        }
+
+        .menu a:hover {
+            color: #00ffff;
+        }
+
+        /* Overlay Section */
+        .section {
+            min-height: 100vh;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 100px 20px;
+            text-align: center;
         }
 
         h1 {
@@ -38,59 +54,71 @@
         }
 
         h2 {
-            margin-top: 20px;
+            margin-bottom: 20px;
             color: #00ffff;
-        }
-
-        p {
-            margin: 8px 0;
-            font-size: 18px;
         }
 
         .social a {
             color: white;
-            text-decoration: none;
             margin: 0 10px;
-            font-weight: bold;
+            text-decoration: none;
         }
 
         .social a:hover {
             color: #00ffff;
         }
 
-        .section {
-            margin-top: 20px;
+        .gallery img {
+            width: 250px;
+            margin: 10px;
+            border-radius: 10px;
         }
+
     </style>
 </head>
 
 <body>
 
-    <div class="overlay">
+    <!-- MENU -->
+    <div class="menu">
+        <a href="#home">Home</a>
+        <a href="#captures">Captures</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <!-- HOME SECTION -->
+    <div id="home" class="section">
         <h1>Sathvik Hosatti</h1>
-        <p>Engineering Student | Tech Enthusiast</p>
+        <p>Engineering Student | Nature Photographer 📸</p>
 
-        <div class="section">
-            <h2>Education</h2>
-            <p>School: Tattva school(10th pass out)</p>
-            <p>College: Narayana college Science(12th pass out)</p>
-            <p>Degree: B.E in (Computer science)</p>
-           </div>
+        <h2>Education</h2>
+        <p>School: Tattva school (10th passout)</p>
+        <p>College: Narayana college(science):12th passout</p>
+        <p>Engeenering college: PES university </p>
+        <p>Degree: B.tech in Computer science</p>
+    </div>
 
-        <div class="section">
-            <h2>Connect With Me</h2>
-            <div class="social">
-                <a href="https://instagram.com/sathvik_2428" target="_blank">Instagram</a>
-                <a href="https://linkedin.com/in/Sathvik Hosatti" target="_blank">LinkedIn</a>
-                
-            </div>
+    <!-- CAPTURES SECTION -->
+    <div id="captures" class="section">
+        <h2>My Captures 📸</h2>
+
+        <div class="gallery">
+            <img src="nature1.jpg">
+            <img src="nature2.jpg">
+            <img src="nature3.jpg">
+            <img src="nature4.jpg">
+            <img src="nature5.jpg">
         </div>
+    </div>
 
-        <div class="section">
-            <h2>About Me</h2>
-            <p>I love technology and capturing nature through photography 📸</p>
+    <!-- CONTACT SECTION -->
+    <div id="contact" class="section">
+        <h2>Connect With Me</h2>
+        <div class="social">
+            <a href="https://instagram.com/sathvik_2428" target="_blank">Instagram</a>
+            <a href="https://linkedin.com/in/Sathvik Hosatti" target="_blank">LinkedIn</a>
+           
         </div>
-
     </div>
 
 </body>
