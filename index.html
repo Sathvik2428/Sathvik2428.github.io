@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Sathvik2428 | Official Website</title>
+   <title>Sathvik2428 | Official Website</title>
 <meta name="description" content="Official website of Sathvik2428 - Engineering Student, Developer, Nature Photographer.">
 <meta name="keywords" content="Sathvik2428, Sathvik Hosatti, Sathvik website, Sathvik portfolio">
 <meta name="author" content="Sathvik2428">
@@ -12,40 +12,24 @@
             padding: 0;
             box-sizing: border-box;
             font-family: Arial, sans-serif;
-            scroll-behavior: smooth;
         }
 
         body {
+            height: 100vh;
             background: url('background.jpg') no-repeat center center/cover;
-            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
-        /* MENU */
-        .menu {
-            position: fixed;
-            top: 20px;
-            left: 20px;
-            z-index: 1000;
-        }
-
-        .menu a {
-            display: block;
-            color: white;
-            text-decoration: none;
-            margin: 8px 0;
-            font-weight: bold;
-        }
-
-        .menu a:hover {
-            color: #00ffff;
-        }
-
-        /* Overlay Section */
-        .section {
-            min-height: 100vh;
+        .overlay {
             background: rgba(0, 0, 0, 0.7);
-            padding: 100px 20px;
+            padding: 40px;
+            border-radius: 15px;
             text-align: center;
+            color: white;
+            width: 90%;
+            max-width: 800px;
         }
 
         h1 {
@@ -54,71 +38,60 @@
         }
 
         h2 {
-            margin-bottom: 20px;
+            margin-top: 20px;
             color: #00ffff;
+        }
+
+        p {
+            margin: 8px 0;
+            font-size: 18px;
         }
 
         .social a {
             color: white;
-            margin: 0 10px;
             text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
         }
 
         .social a:hover {
             color: #00ffff;
         }
 
-        .gallery img {
-            width: 250px;
-            margin: 10px;
-            border-radius: 10px;
+        .section {
+            margin-top: 20px;
         }
-
     </style>
 </head>
 
 <body>
 
-    <!-- MENU -->
-    <div class="menu">
-        <a href="#home">Home</a>
-        <a href="#captures">Captures</a>
-        <a href="#contact">Contact</a>
-    </div>
-
-    <!-- HOME SECTION -->
-    <div id="home" class="section">
+    <div class="overlay">
         <h1>Sathvik Hosatti</h1>
-        <p>Engineering Student | Nature Photographer 📸</p>
+        <p>Engineering Student | Tech Enthusiast</p>
 
-        <h2>Education</h2>
-        <p>School: Tattva school (10th passout)</p>
-        <p>College: Narayana college(science):12th passout</p>
-        <p>Engeenering college: PES university </p>
-        <p>Degree: B.tech in Computer science</p>
-    </div>
-
-    <!-- CAPTURES SECTION -->
-    <div id="captures" class="section">
-        <h2>My Captures 📸</h2>
-
-        <div class="gallery">
-            <img src="nature1.jpg">
-            <img src="nature2.jpg">
-            <img src="nature3.jpg">
-            <img src="nature4.jpg">
-            <img src="nature5.jpg">
+        <div class="section">
+            <h2>Education</h2>
+            <p>School: Tattva school(10th passout)</p>
+            <p>College: Narayana college(science):12th passout</p>
+            <p>Degree: B.E in (COmputer science)</p>
+            <p>Engeenering college: PES university
         </div>
-    </div>
 
-    <!-- CONTACT SECTION -->
-    <div id="contact" class="section">
-        <h2>Connect With Me</h2>
-        <div class="social">
-            <a href="https://instagram.com/sathvik_2428" target="_blank">Instagram</a>
-            <a href="https://linkedin.com/in/Sathvik Hosatti" target="_blank">LinkedIn</a>
-           
+        <div class="section">
+            <h2>Connect With Me</h2>
+            <div class="social">
+                <a href="https://instagram.com/sathvik_2428" target="_blank">Instagram</a>
+                <a href="https://linkedin.com/in/Sathvik Hosatti" target="_blank">LinkedIn</a>
+                
+            </div>
         </div>
+
+        <div class="section">
+            <h2>About Me</h2>
+            <p>I love technology and capturing nature through photography 📸</p>
+        </div>
+
     </div>
 
 </body>
