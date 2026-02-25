@@ -12,87 +12,142 @@
             padding: 0;
             box-sizing: border-box;
             font-family: Arial, sans-serif;
+            scroll-behavior: smooth;
         }
 
         body {
-            height: 100vh;
             background: url('background.jpg') no-repeat center center/cover;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            color: white;
         }
 
-        .overlay {
-            background: rgba(0, 0, 0, 0.7);
-            padding: 40px;
-            border-radius: 15px;
-            text-align: center;
+        /* HAMBURGER ICON */
+        .hamburger {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            font-size: 30px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        /* SLIDING MENU */
+        .sidebar {
+            position: fixed;
+            left: -250px;
+            top: 0;
+            width: 250px;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            padding-top: 60px;
+            transition: 0.4s;
+            z-index: 1000;
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 15px;
+            text-decoration: none;
             color: white;
-            width: 90%;
-            max-width: 800px;
+            font-size: 18px;
+        }
+
+        .sidebar a:hover {
+            background: #00ffff;
+            color: black;
+        }
+
+        .sidebar.active {
+            left: 0;
+        }
+
+        /* SECTIONS */
+        .section {
+            min-height: 100vh;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 120px 20px;
+            text-align: center;
         }
 
         h1 {
             font-size: 50px;
-            margin-bottom: 10px;
         }
 
         h2 {
-            margin-top: 20px;
+            margin: 20px 0;
             color: #00ffff;
         }
 
-        p {
-            margin: 8px 0;
-            font-size: 18px;
+        .gallery img {
+            width: 250px;
+            margin: 10px;
+            border-radius: 10px;
         }
 
         .social a {
             color: white;
-            text-decoration: none;
             margin: 0 10px;
-            font-weight: bold;
+            text-decoration: none;
         }
 
         .social a:hover {
             color: #00ffff;
         }
 
-        .section {
-            margin-top: 20px;
-        }
     </style>
 </head>
 
 <body>
 
-    <div class="overlay">
-        <h1>Sathvik Hosatti</h1>
-        <p>Engineering Student | Tech Enthusiast</p>
-
-        <div class="section">
-            <h2>Education</h2>
-            <p>School: Tattva school(10th passout)</p>
-            <p>College: Narayana college(science):12th passout</p>
-            <p>Degree: B.E in (COmputer science)</p>
-            <p>Engeenering college: PES university
-        </div>
-
-        <div class="section">
-            <h2>Connect With Me</h2>
-            <div class="social">
-                <a href="https://instagram.com/sathvik_2428" target="_blank">Instagram</a>
-                <a href="https://linkedin.com/in/Sathvik Hosatti" target="_blank">LinkedIn</a>
-                
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>About Me</h2>
-            <p>I love technology and capturing nature through photography 📸</p>
-        </div>
-
+    <!-- HAMBURGER -->
+    <div class="hamburger" onclick="toggleMenu()">
+        ☰
     </div>
+
+    <!-- SIDEBAR MENU -->
+    <div class="sidebar" id="menu">
+        <a href="#home" onclick="toggleMenu()">Home</a>
+        <a href="#captures" onclick="toggleMenu()">Captures</a>
+        <a href="#contact" onclick="toggleMenu()">Contact</a>
+    </div>
+
+    <!-- HOME -->
+    <div id="home" class="section">
+        <h1>Sathvik Hosatti</h1>
+        <p>Engineering Student | Nature Photographer 📸</p>
+
+        <h2>Education</h2>
+        <p>School: Tattva school(10th passout)</p>
+        <p>College: Narayana college(science):12th passout</p>
+        <p>Engeneering college:PES University</p>
+        <p>Degree: B.E in Computer science</p>
+    </div>
+
+    <!-- CAPTURES -->
+    <div id="captures" class="section">
+        <h2>My Captures 📸</h2>
+        <div class="gallery">
+            <img src="nature1.jpg">
+            <img src="nature2.jpg">
+            <img src="nature3.jpg">
+        </div>
+    </div>
+
+    <!-- CONTACT -->
+    <div id="contact" class="section">
+        <h2>Connect With Me</h2>
+        <div class="social">
+            <a href="https://instagram.com/sathvik_2428" target="_blank">Instagram</a>
+            <a href="https://linkedin.com/in/Sathvik Hosatti" target="_blank">LinkedIn</a>
+            
+        </div>
+    </div>
+
+    <!-- SCRIPT -->
+    <script>
+        function toggleMenu() {
+            document.getElementById("menu").classList.toggle("active");
+        }
+    </script>
 
 </body>
 </html>
