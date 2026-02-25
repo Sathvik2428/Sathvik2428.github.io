@@ -2,60 +2,93 @@
 <html>
 <head>
     <title>Sathvik Hosatti</title>
+
     <style>
-        body {
-            font-family: Arial;
+        * {
             margin: 0;
             padding: 0;
-            background: linear-gradient(to right, #141e30, #243b55);
-            color: white;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            background: url('background.jpg') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .overlay {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 40px;
+            border-radius: 15px;
             text-align: center;
+            color: white;
+            width: 90%;
+            max-width: 800px;
         }
-        header {
-            padding: 60px;
-        }
+
         h1 {
             font-size: 50px;
+            margin-bottom: 10px;
         }
-        .card {
-            background: white;
-            color: black;
-            margin: 20px auto;
-            padding: 20px;
-            width: 80%;
-            border-radius: 15px;
+
+        h2 {
+            margin-top: 20px;
+            color: #00ffff;
         }
-        footer {
-            padding: 20px;
+
+        p {
+            margin: 8px 0;
+            font-size: 18px;
+        }
+
+        .social a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        .social a:hover {
+            color: #00ffff;
+        }
+
+        .section {
             margin-top: 20px;
         }
     </style>
 </head>
+
 <body>
 
-<header>
-    <h1>Sathvik Hosatti</h1>
-    <p>Engineering Student | Future Developer</p>
-</header>
+    <div class="overlay">
+        <h1>Sathvik Hosatti</h1>
+        <p>Engineering Student | Tech Enthusiast</p>
 
-<div class="card">
-    <h2>About Me</h2>
-    <p>I am passionate about technology and self-growth.</p>
-</div>
+        <div class="section">
+            <h2>Education</h2>
+            <p>School: Tattva school(10th pass out)</p>
+            <p>College: Narayana college Science(12th pass out)</p>
+            <p>Degree: B.E in (Computer science)</p>
+           </div>
 
-<div class="card">
-    <h2>Skills</h2>
-    <p>C Programming | Python | Learning Web Development</p>
-</div>
+        <div class="section">
+            <h2>Connect With Me</h2>
+            <div class="social">
+                <a href="https://instagram.com/yourusername" target="_blank">Instagram</a>
+                <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
+                <a href="https://github.com/Sathvik2428" target="_blank">GitHub</a>
+            </div>
+        </div>
 
-<div class="card">
-    <h2>7483272545</h2>
-    <p>Email: sathvik.hosatti@gmail.com</p>
-</div>
+        <div class="section">
+            <h2>About Me</h2>
+            <p>I love technology and capturing nature through photography 📸</p>
+        </div>
 
-<footer>
-    © 2026 Sathvik Hosatti
-</footer>
+    </div>
 
 </body>
 </html>
