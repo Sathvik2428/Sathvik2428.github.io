@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-   <title>Sathvik2428 | Official Website</title>
-<meta name="description" content="Official website of Sathvik2428 - Engineering Student, Developer, Nature Photographer.">
-<meta name="keywords" content="Sathvik2428, Sathvik Hosatti, Sathvik website, Sathvik portfolio">
-<meta name="author" content="Sathvik2428">
+    <title>Sathvik Hosatti</title>
 
     <style>
         * {
@@ -17,19 +14,61 @@
         body {
             height: 100vh;
             background: url('background.jpg') no-repeat center center/cover;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            color: white;
         }
 
-        .overlay {
-            background: rgba(0, 0, 0, 0.7);
+        /* Hamburger */
+        .hamburger {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            font-size: 32px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        /* Sliding Menu */
+        .menu {
+            position: fixed;
+            top: 0;
+            left: -260px;
+            width: 260px;
+            height: 100%;
+            background: rgba(0,0,0,0.95);
+            padding-top: 80px;
+            transition: 0.4s;
+            z-index: 1000;
+        }
+
+        .menu a {
+            display: block;
+            padding: 15px 25px;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .menu a:hover {
+            background: #00ffff;
+            color: black;
+        }
+
+        .menu.active {
+            left: 0;
+        }
+
+        /* Center Card */
+        .card {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0,0,0,0.7);
             padding: 40px;
             border-radius: 15px;
+            width: 85%;
+            max-width: 900px;
             text-align: center;
-            color: white;
-            width: 90%;
-            max-width: 800px;
         }
 
         h1 {
@@ -38,61 +77,59 @@
         }
 
         h2 {
-            margin-top: 20px;
             color: #00ffff;
+            margin-top: 25px;
         }
 
         p {
-            margin: 8px 0;
             font-size: 18px;
+            margin: 8px 0;
         }
 
-        .social a {
-            color: white;
-            text-decoration: none;
-            margin: 0 10px;
+        .social span {
+            margin: 0 15px;
             font-weight: bold;
-        }
-
-        .social a:hover {
-            color: #00ffff;
-        }
-
-        .section {
-            margin-top: 20px;
         }
     </style>
 </head>
 
 <body>
 
-    <div class="overlay">
+    <!-- Hamburger -->
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+    <!-- Menu -->
+    <div class="menu" id="menu">
+        <a href="index.html">Home</a>
+        <a href="captures.html">Captures</a>
+    </div>
+
+    <!-- Content -->
+    <div class="card">
         <h1>Sathvik Hosatti</h1>
         <p>Engineering Student | Tech Enthusiast</p>
 
-        <div class="section">
-            <h2>Education</h2>
-            <p>School: Tattva school(10th passout)</p>
-            <p>College: Narayana college(science):12th passout</p>
-            <p>Engeenering college: PES university</p>
-            <p>Degree: Btech in (Computer science)</p>
+        <h2>Education</h2>
+        <p>School: Tattva School (10th)</p>
+        <p>College: Narayana PU College (12th)</p>
+        <p>Engineering College: PES University</p>
+        <p>Degree: B.Tech (Computer Science)</p>
+
+        <h2>Connect With Me</h2>
+        <div class="social">
+            <span>Instagram</span>
+            <span>LinkedIn</span>
         </div>
 
-        <div class="section">
-            <h2>Connect With Me</h2>
-            <div class="social">
-                <a href="https://instagram.com/sathvik_2428" target="_blank">Instagram</a>
-                <a href="https://linkedin.com/in/Sathvik Hosatti" target="_blank">LinkedIn</a>
-                
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>About Me</h2>
-            <p>I love technology and capturing nature through photography 📸</p>
-        </div>
-
+        <h2>About Me</h2>
+        <p>I love technology and capturing nature through photography 📸</p>
     </div>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("menu").classList.toggle("active");
+        }
+    </script>
 
 </body>
 </html>
