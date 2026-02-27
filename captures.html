@@ -3,6 +3,9 @@
 <head>
     <title>My Captures</title>
 
+    <!-- Mobile responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <style>
         body {
             margin: 0;
@@ -13,32 +16,57 @@
         }
 
         h1 {
-            margin: 30px 0;
             color: #00ffff;
+            margin: 20px 0;
         }
 
         .gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
-            padding: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 10px;
+            padding: 10px;
         }
 
         .gallery img {
             width: 100%;
             border-radius: 10px;
-            transition: 0.3s;
+            cursor: pointer;
         }
 
-        .gallery img:hover {
-            transform: scale(1.05);
+        /* FULLSCREEN VIEW */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.95);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .overlay img {
+            max-width: 95%;
+            max-height: 95%;
+            border-radius: 10px;
+        }
+
+        .overlay span {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            font-size: 30px;
+            cursor: pointer;
+            color: white;
         }
 
         a {
             color: #00ffff;
             text-decoration: none;
-            display: inline-block;
-            margin-bottom: 20px;
+            display: block;
+            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -49,12 +77,30 @@
     <a href="index.html">← Back to Home</a>
 
     <div class="gallery">
-        <img src="pic1.jpg">
-        <img src="pic2.jpg">
-        <img src="pic3.jpg">
-        <img src="pic4.jpg">
-        <img src="pic5.jpg">
-        </div>
+        <img src="pic1.jpg" onclick="openImg(this.src)">
+        <img src="pic2.jpg" onclick="openImg(this.src)">
+        <img src="pic3.jpg" onclick="openImg(this.src)">
+        <img src="pic4.jpg" onclick="openImg(this.src)">
+        <img src="pic5.jpg" onclick="openImg(this.src)"><!-- add more images like this -->
+        <!-- <img src="pic2.jpg" onclick="openImg(this.src)"> -->
+    </div>
+
+    <!-- FULLSCREEN IMAGE -->
+    <div class="overlay" id="overlay">
+        <span onclick="closeImg()">✕</span>
+        <img id="fullImg">
+    </div>
+
+    <script>
+        function openImg(src) {
+            document.getElementById("overlay").style.display = "flex";
+            document.getElementById("fullImg").src = src;
+        }
+
+        function closeImg() {
+            document.getElementById("overlay").style.display = "none";
+        }
+    </script>
 
 </body>
 </html>
